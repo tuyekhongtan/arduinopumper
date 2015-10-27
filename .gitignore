@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arduino Controller</title>
+</head>
+<body background="http://www.wallpapersonview.com/wallpapers/4/abstract_colorful_textures_widescreen_desktop_background_picture-371.jpg">
+	
+	<div class="page-header" align="center">	
+		<h1 style="color: white">Pumper Controller</h1>
+		<h4 id="timer" style="color: white">Running time: 0 (s)</h4>
+	</div>
+
+	<div class="body" style="margin-left: 40px; margin-right: 40px">
+
+		<div style="background-color: white;  border-radius: 5px; margin: auto; padding-bottom: 10px;">		
+			<center><h3 style="padding-top: 5px;">System</h3></center>
+			<hr/>
+			<div style="margin: auto;" align="center">
+				<p>ON <a href="BUTTON1" class="btn btn-success">ON</a>.</p>
+				<p>aa <a href="BUTTON2" class="btn btn-success">OFF</a>.</p>
+			</div>
+		</div>
+
+		<div style="background-color: white;  border-radius: 5px; padding-bottom: 10px;">		
+			<center><h3 style="padding-top: 5px;">Schedule</h3></center>
+			<hr/>
+			<div style="margin: auto" align="center">
+				<input type="text" placeholder="Enter time here"/>
+				<button type="button" class="btn btn-success" style="margin-left: 10px">Save</button>
+			</div>
+		</div>
+
+		<div style="background-color: black; margin-top: 10px; margin-left: 35%" >
+			
+			<div class="panel panel-default" style="float: left">
+				<!-- Default panel contents -->
+				<div class="panel-heading"><b>Water Parameters</b></div>
+				<!-- Table -->
+				<table class="table" style="text-align: center">
+					<tr>
+						<td>#1 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#2 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#3 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#4 </td>
+						<td>12123</td>
+					</tr>
+				</table>
+			</div>
+			
+			
+			<div class="panel panel-default" style="float: left; margin-left: 10px;">
+				<!-- Default panel contents -->
+				<div class="panel-heading"><b>Remaining Water Parameters</b></div>
+				<!-- Table -->
+				<table class="table">
+					<tr>
+						<td>#1 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#2 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#3 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#4 </td>
+						<td>12123</td>
+					</tr>
+				</table>
+			</div>
+			
+
+			<div class="panel panel-default" style="float: left; margin-left: 10px;">
+				<!-- Default panel contents -->
+				<div class="panel-heading"><b>Height Parameters</b></div>
+				<!-- Table -->
+				<table class="table">
+					<tr>
+						<td>#1 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#2 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#3 </td>
+						<td>12123</td>
+					</tr>
+					<tr>
+						<td>#4 </td>
+						<td>12123</td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript">
+		
+		var counter = 0;
+		var myInterval;
+		function startTimer () {	
+			myInterval = setInterval(function(){
+				counter++;
+				document.getElementById("timer").innerHTML = "Running time: " + counter + " (s)";
+				
+			}, 1000);
+		}
+		function stopTimer(){
+			counter = 0;
+			clearInterval(myInterval);
+			document.getElementById("timer").innerHTML = "Running time: " + counter + " (s)"
+			
+		}
+	</script>
+</button>
+</body>
+</html>
